@@ -1,0 +1,11 @@
+.qa-reports/
+.auto-loop-state.json
+.night-shift-state.json
+.ha-metrics.jsonl
+.ha-learnings.jsonl
+.ha-version
+.ha-counsel-log.jsonl
+.ha-design-risks.jsonl
+.ha-qa-logs.jsonl
+.ha-qa-reports.jsonl
+firebase-debug.log
