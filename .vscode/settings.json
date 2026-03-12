@@ -1,0 +1,12 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^cat ~/\\.claude/plugins/installed_plugins\\.json \\| python3 -c \"import json,sys; data=json\\.load\\(sys\\.stdin\\); \\[print\\(k\\) for k in data\\['plugins'\\]\\.keys\\(\\)\\]\"$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^cat ~/\\.claude/plugins/installed_plugins\\.json \\| python3 -c \"import json,sys; data=json\\.load\\(sys\\.stdin\\); print\\(json\\.dumps\\(data\\['plugins'\\]\\['d3fau1t-designer@d3fau1t-marketplace'\\], indent=2\\)\\)\"$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}
