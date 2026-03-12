@@ -1,0 +1,27 @@
+{
+  "id": "on-build-complete",
+  "event": "PostToolUse",
+  "description": "Confirms docs/frontend-plan.md was written and surfaces a validation checklist after web-build or homepage-build completes.",
+  "matcher": {
+    "tool": "create_file",
+    "path_pattern": "docs/(frontend-plan|build-spec)\\.md$"
+  },
+  "action": {
+    "type": "notify",
+    "message": "Build plan written. Run through the validation checklist before moving to preview deployment.",
+    "checklist": [
+      "All required routes or screens are listed.",
+      "Component tree matches the Figma spec.",
+      "Analytics events are defined.",
+      "Design tokens are mapped to implementation variables.",
+      "Accessibility requirements are noted.",
+      "Known risks are listed."
+    ],
+    "suggest_next": [
+      {
+        "label": "Set up preview deployment on Vercel or Netlify.",
+        "reason": "Get a shareable URL for review before production."
+      }
+    ]
+  }
+}

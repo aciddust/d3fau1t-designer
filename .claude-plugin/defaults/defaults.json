@@ -1,0 +1,41 @@
+{
+  "stack": {
+    "preferred": "next.js",
+    "alternatives": ["react", "sveltekit"],
+    "cssStrategy": "tailwind",
+    "packageManager": "npm"
+  },
+  "deployment": {
+    "preferred": "vercel",
+    "alternatives": ["netlify"]
+  },
+  "outputs": {
+    "brief": "docs/project-brief.md",
+    "structure": "docs/product-structure.md",
+    "figmaSpec": "docs/figma-spec.md",
+    "buildSpec": "docs/build-spec.md",
+    "frontendPlan": "docs/frontend-plan.md",
+    "validationPlan": "docs/validation-plan.md"
+  },
+  "behavior": {
+    "scaffoldWithoutExplicitRequest": false,
+    "overwriteExistingDocs": false,
+    "surfaceAssumptions": true,
+    "askMinimumBlockingQuestions": true,
+    "preferTablesForScanability": true
+  },
+  "figmaMcp": {
+    "namingConvention": {
+      "pages": "PascalCase",
+      "frames": "kebab-case",
+      "components": "PascalCase",
+      "variants": "camelCase",
+      "tokenGroups": "kebab-case"
+    },
+    "devicePriority": ["desktop", "mobile"]
+  },
+  "analytics": {
+    "defaultEventFormat": "snake_case",
+    "providerNote": "Specify provider in brief (e.g. GA4, Amplitude, Mixpanel)."
+  }
+}

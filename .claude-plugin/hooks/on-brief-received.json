@@ -1,0 +1,36 @@
+{
+  "id": "on-brief-received",
+  "event": "PreToolUse",
+  "description": "Validates brief completeness before the web-product-pipeline or homepage-pipeline command executes.",
+  "matcher": {
+    "tool": "execute_command",
+    "command_pattern": "^/(web-product-pipeline|homepage-pipeline)"
+  },
+  "action": {
+    "type": "validate",
+    "checks": [
+      {
+        "field": "project_type",
+        "required": true,
+        "values": ["webpage", "website", "webservice"],
+        "message": "Project type is missing. Specify webpage, website, or webservice."
+      },
+      {
+        "field": "business_goal",
+        "required": true,
+        "message": "Business goal is missing. Describe what this project should achieve."
+      },
+      {
+        "field": "target_audience",
+        "required": true,
+        "message": "Target audience is missing. Describe who this is for."
+      },
+      {
+        "field": "success_event",
+        "required": true,
+        "message": "Success event is missing. Define the primary conversion or action."
+      }
+    ],
+    "on_failure": "warn_and_continue"
+  }
+}
