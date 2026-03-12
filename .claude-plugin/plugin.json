@@ -1,36 +1,7 @@
 {
   "name": "ai-web-production",
-  "version": "0.1.0",
   "description": "AI-native web production pipeline for Claude Code. Runs from brief to structure, Figma MCP handoff, frontend build plan, and validation — for webpages, websites, and web services.",
   "author": {
     "name": "d3fau1t-design"
-  },
-  "license": "MIT",
-
-  "commands": [
-    "commands/web-product-pipeline.md",
-    "commands/web-design-handoff.md",
-    "commands/web-build.md",
-    "commands/homepage-pipeline.md",
-    "commands/homepage-figma-handoff.md",
-    "commands/homepage-build.md"
-  ],
-
-  "agents": [
-    "agents/web-production-agent.agent.md",
-    "agents/design-handoff-agent.agent.md"
-  ],
-
-  "skills": [
-    "skills/brief-intake/SKILL.md",
-    "skills/ia-generator/SKILL.md",
-    "skills/figma-spec-writer/SKILL.md",
-    "skills/frontend-planner/SKILL.md"
-  ],
-
-  "hooks": [
-    "hooks/on-brief-received.json",
-    "hooks/on-design-handoff-complete.json",
-    "hooks/on-build-complete.json"
-  ]
+  }
 }

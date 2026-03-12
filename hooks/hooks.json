@@ -1,0 +1,27 @@
+{
+  "description": "AI web production pipeline hooks for pre-flight validation and post-step notifications",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Before executing this command, check if the conversation includes a project type (webpage/website/webservice), a business goal, and a target audience. If any of these are missing, politely ask the user to provide them before continuing."
+          }
+        ],
+        "matcher": "mcp__"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "After writing docs/figma-spec.md, remind the user to review open design assumptions before passing the spec to Figma MCP. Suggest running /web-build as the next step."
+          }
+        ],
+        "matcher": "Write|create_file"
+      }
+    ]
+  }
+}
