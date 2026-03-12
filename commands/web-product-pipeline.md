@@ -1,56 +1,56 @@
 ---
-description: Run an AI-native web production pipeline for a webpage, website, or web service from brief to UX structure, design handoff, frontend build plan, and validation.
-argument-hint: Paste the product brief, target users, KPIs, brand constraints, content inputs, and preferred stack.
+description: 웹페이지, 웹사이트, 웹서비스를 위한 AI 네이티브 웹 프로덕션 파이프라인을 실행합니다. 브리프부터 UX 구조, 디자인 핸드오프, 프론트엔드 빌드 플랜, 검증까지 진행합니다.
+argument-hint: 프로덕트 브리프, 타겟 사용자, KPI, 브랜드 제약, 콘텐츠 요구사항, 선호 스택을 붙여넣으세요.
 ---
 
-You are running the team's AI-native web production pipeline.
+팀의 AI 네이티브 웹 프로덕션 파이프라인을 실행합니다.
 
-Use the user's arguments below as the source brief.
+아래 사용자 입력을 소스 브리프로 사용하세요.
 
 <brief>
 $ARGUMENTS
 </brief>
 
-First classify the project as one of these.
-- webpage
-- website
-- webservice
+먼저 프로젝트를 다음 중 하나로 분류하세요.
+- 웹페이지 (webpage)
+- 웹사이트 (website)
+- 웹서비스 (webservice)
 
-Then execute this workflow in order.
+그런 다음 아래 워크플로우를 순서대로 실행하세요.
 
-1. Validate the brief.
-- Extract business goal, target audience, conversion goal, success KPI, scope, required pages or screens, content dependencies, brand constraints, technical constraints, and launch constraints.
-- If key inputs are missing, ask only the minimum blocking questions.
+1. 브리프 검증
+- 비즈니스 목표, 타겟 사용자, 전환 목표, 성공 KPI, 범위, 필요한 페이지/화면, 콘텐츠 의존성, 브랜드 제약, 기술 제약, 론칭 제약을 추출하세요.
+- 핵심 입력이 누락된 경우, 최소한의 블로킹 질문만 하세요.
 
-2. Produce product structure.
-- For a webpage: define section architecture, message hierarchy, CTA structure, and experiment hypotheses.
-- For a website: define sitemap, key templates, page purposes, navigation model, and major user flows.
-- For a webservice: define core jobs-to-be-done, information architecture, primary flows, critical screens, state changes, and feature boundaries.
+2. 프로덕트 구조 작성
+- 웹페이지: 섹션 아키텍처, 메시지 계층, CTA 구조, 실험 가설을 정의하세요.
+- 웹사이트: 사이트맵, 주요 템플릿, 페이지 목적, 내비게이션 모델, 주요 사용자 플로우를 정의하세요.
+- 웹서비스: 핵심 Jobs-to-be-Done, 정보 아키텍처, 주요 플로우, 핵심 화면, 상태 변화, 기능 경계를 정의하세요.
 
-3. Produce Figma MCP handoff instructions.
-- Define frame inventory for desktop and mobile.
-- Define grid, spacing, tokens, components, copy placeholders, and variant states.
-- Make the output specific enough that another agent can recreate the design in Figma with MCP.
+3. Figma MCP 핸드오프 지침 작성
+- 데스크톱과 모바일의 프레임 인벤토리를 정의하세요.
+- 그리드, 간격, 토큰, 컴포넌트, 카피 플레이스홀더, 배리언트 상태를 정의하세요.
+- 다른 에이전트가 MCP로 Figma에서 디자인을 재현할 수 있을 만큼 구체적으로 작성하세요.
 
-4. Produce implementation plan.
-- Recommend the most appropriate stack based on scope and constraints.
-- Define route or screen scope, component tree, responsive behavior, accessibility requirements, analytics events, content model, and integration points.
-- If an app already exists in the repo, propose concrete implementation steps against the existing structure.
-- If no app exists, write a scaffold plan only unless the user explicitly asks to scaffold.
+4. 구현 플랜 작성
+- 범위와 제약에 따라 가장 적합한 스택을 추천하세요.
+- 라우트/화면 범위, 컴포넌트 트리, 반응형 동작, 접근성 요구사항, 애널리틱스 이벤트, 콘텐츠 모델, 통합 지점을 정의하세요.
+- 레포에 앱이 이미 존재하면 기존 구조에 맞는 구체적인 구현 단계를 제시하세요.
+- 앱이 없으면 사용자가 명시적으로 스캐폴딩을 요청하지 않는 한 스캐폴드 플랜만 작성하세요.
 
-5. Produce operating loop.
-- Define review inputs, owner, artifact, approval criteria, and turnaround target for each phase.
-- Include preview deploy checklist, QA checklist, analytics verification checklist, and experiment checklist.
+5. 운영 루프 작성
+- 각 단계별 리뷰 입력, 담당자, 산출물, 승인 기준, 목표 소요 시간을 정의하세요.
+- 프리뷰 배포 체크리스트, QA 체크리스트, 애널리틱스 검증 체크리스트, 실험 체크리스트를 포함하세요.
 
-Write or update these files when useful.
+필요한 경우 아래 파일을 작성하거나 업데이트하세요.
 - docs/project-brief.md
 - docs/product-structure.md
 - docs/figma-spec.md
 - docs/build-spec.md
 - docs/validation-plan.md
 
-Response rules.
-- Be concrete and execution-oriented.
-- Explicitly separate facts, assumptions, and open questions.
-- Prefer tables where they improve scanability.
-- If the brief conflicts with itself, stop and call out the conflict.
+응답 규칙
+- 구체적이고 실행 지향적으로 작성하세요.
+- 사실, 가정, 미결 질문을 명확히 구분하세요.
+- 가독성이 높아지는 경우 테이블을 사용하세요.
+- 브리프가 자체 모순이면 진행을 멈추고 충돌을 명시하세요.

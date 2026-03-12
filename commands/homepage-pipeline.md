@@ -1,51 +1,51 @@
 ---
-description: Run an AI-native homepage renewal pipeline from brief to IA, Figma handoff, frontend build spec, and experiment plan.
-argument-hint: Paste a homepage brief, KPI, target audience, brand constraints, and preferred stack.
+description: 브리프부터 IA, Figma 핸드오프, 프론트엔드 빌드 스펙, 실험 플랜까지 AI 네이티브 홈페이지 리뉴얼 파이프라인을 실행합니다.
+argument-hint: 홈페이지 브리프, KPI, 타겟 사용자, 브랜드 제약, 선호 스택을 붙여넣으세요.
 ---
 
-You are running the team's homepage renewal pipeline.
+팀의 홈페이지 리뉴얼 파이프라인을 실행합니다.
 
-Use the user's arguments below as the source brief.
+아래 사용자 입력을 소스 브리프로 사용하세요.
 
 <brief>
 $ARGUMENTS
 </brief>
 
-Execute this workflow in order.
+아래 워크플로우를 순서대로 실행하세요.
 
-1. Validate the brief.
-- Extract business goal, primary audience, value proposition, conversion KPI, proof points, brand constraints, and technical constraints.
-- If key inputs are missing, ask only the minimum blocking questions.
+1. 브리프 검증
+- 비즈니스 목표, 주요 대상, 가치 제안, 전환 KPI, 증명 포인트, 브랜드 제약, 기술 제약을 추출하세요.
+- 핵심 입력이 누락된 경우, 최소한의 블로킹 질문만 하세요.
 
-2. Produce information architecture.
-- Create a concise sitemap for the homepage only.
-- Define section order, purpose of each section, required content, and target user action.
-- Include 2 to 3 user flows and 3 experiment hypotheses.
+2. 정보 아키텍처 작성
+- 홈페이지 전용 간결한 사이트맵을 만드세요.
+- 섹션 순서, 각 섹션의 목적, 필요한 콘텐츠, 타겟 사용자 액션을 정의하세요.
+- 2~3개의 사용자 플로우와 3개의 실험 가설을 포함하세요.
 
-3. Produce Figma MCP handoff instructions.
-- Describe the desktop and mobile frame structure.
-- Define section layout, grid, spacing rhythm, typography system, color tokens, component list, and copy placeholders.
-- Make the output specific enough that another agent can recreate the design in Figma with MCP.
+3. Figma MCP 핸드오프 지침 작성
+- 데스크톱과 모바일 프레임 구조를 설명하세요.
+- 섹션 레이아웃, 그리드, 간격 리듬, 타이포그래피 시스템, 컬러 토큰, 컴포넌트 목록, 카피 플레이스홀더를 정의하세요.
+- 다른 에이전트가 MCP로 Figma에서 디자인을 재현할 수 있을 만큼 구체적으로 작성하세요.
 
-4. Produce frontend build spec.
-- Recommend the most appropriate stack among Next.js, React, and SvelteKit based on the brief.
-- Define route scope, component tree, responsive behavior, accessibility requirements, animation constraints, analytics events, and content model.
-- If an app already exists in the repo, propose concrete implementation steps against the existing structure.
-- If no app exists, write a scaffold plan only. Do not invent files outside the documented plan unless the user explicitly asks to scaffold.
+4. 프론트엔드 빌드 스펙 작성
+- 브리프에 따라 Next.js, React, SvelteKit 중 가장 적합한 스택을 추천하세요.
+- 라우트 범위, 컴포넌트 트리, 반응형 동작, 접근성 요구사항, 애니메이션 제약, 애널리틱스 이벤트, 콘텐츠 모델을 정의하세요.
+- 레포에 앱이 이미 존재하면 기존 구조에 맞는 구체적인 구현 단계를 제시하세요.
+- 앱이 없으면 스캐폴드 플랜만 작성하세요. 사용자가 명시적으로 스캐폴딩을 요청하지 않는 한 계획 외 파일을 생성하지 마세요.
 
-5. Produce review loop.
-- Define a fast review cycle with inputs, owner, artifact, and approval criteria for each step.
-- Include a deploy-preview checklist and A/B test setup checklist.
+5. 리뷰 루프 작성
+- 각 단계별 입력, 담당자, 산출물, 승인 기준을 포함한 빠른 리뷰 사이클을 정의하세요.
+- 배포 프리뷰 체크리스트와 A/B 테스트 설정 체크리스트를 포함하세요.
 
-Write or update these files when useful.
+필요한 경우 아래 파일을 작성하거나 업데이트하세요.
 - docs/homepage-brief.md
 - docs/homepage-ia.md
 - docs/homepage-figma-spec.md
 - docs/homepage-build-spec.md
 - docs/homepage-experiments.md
 
-Response rules.
-- Be concrete, not inspirational.
-- Prefer tables where they improve scanability.
-- Surface assumptions explicitly.
-- If the brief conflicts with itself, stop and call out the conflict.
+응답 규칙
+- 영감을 주는 것이 아니라 구체적으로 작성하세요.
+- 가독성이 높아지는 경우 테이블을 사용하세요.
+- 가정을 명시적으로 드러내세요.
+- 브리프가 자체 모순이면 진행을 멈추고 충돌을 명시하세요.

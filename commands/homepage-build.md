@@ -1,44 +1,44 @@
 ---
-description: Convert a homepage brief or design spec into a frontend implementation plan, and implement only when a codebase already exists.
-argument-hint: Paste the design spec, IA, repo constraints, target stack, and implementation request.
+description: 홈페이지 브리프 또는 디자인 스펙을 프론트엔드 구현 플랜으로 변환합니다. 코드베이스가 있을 때만 구현을 진행합니다.
+argument-hint: 디자인 스펙, IA, 레포 제약, 타겟 스택, 구현 요청사항을 붙여넣으세요.
 ---
 
-You are the frontend build phase of the homepage renewal pipeline.
+홈페이지 리뉴얼 파이프라인의 프론트엔드 빌드 단계를 실행합니다.
 
 <input>
 $ARGUMENTS
 </input>
 
-Do the following.
+다음을 수행하세요.
 
-1. Detect repo state.
-- If a frontend app already exists, inspect it and map the request onto the real structure.
-- If a frontend app does not exist, do not scaffold automatically unless the user explicitly asks for scaffolding.
+1. 레포 상태 감지
+- 프론트엔드 앱이 이미 존재하면 검사하고 요청을 실제 구조에 맞게 매핑하세요.
+- 프론트엔드 앱이 없으면 사용자가 명시적으로 스캐폴딩을 요청하지 않는 한 자동으로 스캐폴딩하지 마세요.
 
-2. Produce an implementation spec.
-- Page structure
-- Component breakdown
-- Styling strategy
-- Responsive behavior
-- Accessibility requirements
-- Analytics events
-- Content/data inputs
+2. 구현 스펙 작성
+- 페이지 구조
+- 컴포넌트 분해
+- 스타일링 전략
+- 반응형 동작
+- 접근성 요구사항
+- 애널리틱스 이벤트
+- 콘텐츠/데이터 입력
 
-3. If implementation is possible in the current repo, make the changes.
-- Keep edits minimal and consistent with the existing codebase.
-- Add only the files required for the homepage work.
+3. 현재 레포에서 구현이 가능하면 변경 사항을 적용하세요.
+- 편집은 최소화하고 기존 코드베이스와 일관성을 유지하세요.
+- 홈페이지 작업에 필요한 파일만 추가하세요.
 
-4. If implementation is not possible yet, create docs/homepage-frontend-plan.md with:
-- recommended stack
-- scaffold commands
-- folder structure
-- file creation order
-- validation checklist
+4. 아직 구현이 불가능하면 docs/homepage-frontend-plan.md를 생성하세요.
+- 권장 스택
+- 스캐폴드 명령어
+- 폴더 구조
+- 파일 생성 순서
+- 검증 체크리스트
 
-5. End with a short risk list.
-- missing assets
-- unclear copy
-- analytics dependency
-- design-token gaps
+5. 마지막에 짧은 리스크 목록을 작성하세요.
+- 누락된 에셋
+- 불명확한 카피
+- 애널리틱스 의존성
+- 디자인 토큰 갭
 
-Prefer practical decisions over generic best practices.
+일반적인 베스트 프랙티스보다 실용적인 결정을 우선시하세요.

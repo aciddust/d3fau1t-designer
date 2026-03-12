@@ -1,52 +1,52 @@
 ---
-description: Turn a webpage, website, or web service brief into Figma MCP-ready frames, tokens, components, and execution steps.
-argument-hint: Paste the brief or IA, plus brand direction, references, and target devices.
+description: 웹페이지, 웹사이트, 웹서비스 브리프를 Figma MCP 실행 가능한 프레임, 토큰, 컴포넌트, 실행 단계로 변환합니다.
+argument-hint: 브리프 또는 IA, 브랜드 방향, 레퍼런스, 타겟 기기를 붙여넣으세요.
 ---
 
-Transform the user's input into a Figma MCP handoff spec.
+사용자 입력을 Figma MCP 핸드오프 스펙으로 변환하세요.
 
 <input>
 $ARGUMENTS
 </input>
 
-First detect whether the project is a webpage, website, or webservice.
+먼저 프로젝트가 웹페이지, 웹사이트, 웹서비스 중 무엇인지 파악하세요.
 
-Produce these sections.
+다음 섹션을 작성하세요.
 
-1. Frame inventory
-- Required desktop frames
-- Required mobile frames
-- Required key states, modals, overlays, empty states, loading states, and error states when relevant
+1. 프레임 인벤토리
+- 필요한 데스크톱 프레임
+- 필요한 모바일 프레임
+- 필요한 주요 상태, 모달, 오버레이, 빈 상태, 로딩 상태, 오류 상태
 
-2. Layout system
-- Grid definition
-- Spacing scale
-- Page or screen-by-screen layout instructions
-- Responsive behavior rules
+2. 레이아웃 시스템
+- 그리드 정의
+- 간격 스케일
+- 페이지/화면별 레이아웃 지침
+- 반응형 동작 규칙
 
-3. Design tokens
-- Semantic colors
-- Typography scale
-- Radius, border, shadow, surface, and motion rules
+3. 디자인 토큰
+- 시맨틱 컬러
+- 타이포그래피 스케일
+- 반경, 테두리, 그림자, 서피스, 모션 규칙
 
-4. Component inventory
-- Shared primitives
-- Navigation patterns
-- Content modules
-- Form patterns
-- Data display or dashboard modules when relevant
-- Variants and interaction states for each component
+4. 컴포넌트 인벤토리
+- 공유 프리미티브
+- 내비게이션 패턴
+- 콘텐츠 모듈
+- 폼 패턴
+- 데이터 표시 / 대시보드 모듈 (해당하는 경우)
+- 각 컴포넌트의 배리언트와 인터랙션 상태
 
-5. Copy placeholders
-- Headlines, labels, body copy, CTA labels, trust signals, helper text, system messages, and errors
+5. 카피 플레이스홀더
+- 헤드라인, 레이블, 본문 카피, CTA 레이블, 신뢰 신호, 도움말 텍스트, 시스템 메시지, 오류 메시지
 
-6. MCP execution checklist
-- Ordered steps another agent should follow inside Figma
-- Naming conventions for pages, frames, components, variants, and styles
+6. MCP 실행 체크리스트
+- Figma 내에서 다른 에이전트가 따라야 할 순서대로 정렬된 단계
+- 페이지, 프레임, 컴포넌트, 배리언트, 스타일의 네이밍 컨벤션
 
-Write the result to docs/figma-spec.md if that file does not already exist, or update it if it does.
+해당 파일이 없으면 docs/figma-spec.md에 결과를 작성하고, 있으면 업데이트하세요.
 
-Constraints.
-- Optimize for implementation clarity over visual theory.
-- Keep desktop and mobile aligned as one system.
-- If the brief is vague, make assumptions explicit instead of hiding them.
+제약 조건
+- 시각 이론보다 구현 명확성을 우선시하세요.
+- 데스크톱과 모바일을 하나의 통합 시스템으로 유지하세요.
+- 브리프가 모호하면 가정을 숨기지 말고 명시하세요.

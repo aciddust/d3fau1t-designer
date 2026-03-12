@@ -1,47 +1,47 @@
 ---
-description: Turn a homepage brief or IA into Figma MCP-ready layout, token, and component instructions.
-argument-hint: Paste the brief or IA, plus any brand direction, references, and device priorities.
+description: 홈페이지 브리프 또는 IA를 Figma MCP 실행 가능한 레이아웃, 토큰, 컴포넌트 지침으로 변환합니다.
+argument-hint: 브리프 또는 IA, 브랜드 방향, 레퍼런스, 기기 우선순위를 붙여넣으세요.
 ---
 
-Transform the user's input into a Figma MCP handoff spec.
+사용자 입력을 Figma MCP 핸드오프 스펙으로 변환하세요.
 
 <input>
 $ARGUMENTS
 </input>
 
-Your job is to create an output that can be used directly by another agent controlling Figma.
+Figma를 제어하는 다른 에이전트가 바로 사용할 수 있는 출력물을 작성하세요.
 
-Produce these sections.
+다음 섹션을 작성하세요.
 
-1. Frame plan
-- Desktop frame size
-- Mobile frame size
-- Variants or alternate states that must exist
+1. 프레임 플랜
+- 데스크톱 프레임 크기
+- 모바일 프레임 크기
+- 반드시 존재해야 하는 배리언트 또는 대체 상태
 
-2. Layout system
-- Grid definition
-- Spacing scale
-- Section-by-section layout instructions
+2. 레이아웃 시스템
+- 그리드 정의
+- 간격 스케일
+- 섹션별 레이아웃 지침
 
-3. Design tokens
-- Colors with semantic names
-- Typography scale
-- Radius, shadow, border, and surface rules
+3. 디자인 토큰
+- 시맨틱 이름이 있는 컬러
+- 타이포그래피 스케일
+- 반경, 그림자, 테두리, 서피스 규칙
 
-4. Component inventory
-- Navbar, hero, social proof, feature blocks, CTA blocks, footer, and any domain-specific modules
-- Variants and states for each component
+4. 컴포넌트 인벤토리
+- 내비바, 히어로, 소셜 프루프, 기능 블록, CTA 블록, 푸터, 도메인 특화 모듈
+- 각 컴포넌트의 배리언트와 상태
 
-5. Copy placeholders
-- Headlines, body copy, CTA labels, trust signals, and proof content
+5. 카피 플레이스홀더
+- 헤드라인, 본문 카피, CTA 레이블, 신뢰 신호, 증명 콘텐츠
 
-6. MCP execution checklist
-- Ordered steps another agent should follow inside Figma
-- Naming conventions for pages, frames, components, and styles
+6. MCP 실행 체크리스트
+- Figma 내에서 다른 에이전트가 따라야 할 순서대로 정렬된 단계
+- 페이지, 프레임, 컴포넌트, 스타일의 네이밍 컨벤션
 
-Write the result to docs/homepage-figma-spec.md if that file does not already exist, or update it if it does.
+해당 파일이 없으면 docs/homepage-figma-spec.md에 결과를 작성하고, 있으면 업데이트하세요.
 
-Constraints.
-- Optimize for implementation clarity over visual theory.
-- Keep desktop and mobile aligned as one system.
-- If the brief is vague, make assumptions explicit instead of hiding them.
+제약 조건
+- 시각 이론보다 구현 명확성을 우선시하세요.
+- 데스크톱과 모바일을 하나의 통합 시스템으로 유지하세요.
+- 브리프가 모호하면 가정을 숨기지 말고 명시하세요.
