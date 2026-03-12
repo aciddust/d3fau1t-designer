@@ -1,17 +1,6 @@
 {
   "description": "AI 웹 프로덕션 파이프라인 훅",
   "hooks": {
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "prompt",
-            "prompt": "웹 파이프라인 명령어(web-product-pipeline, web-design-handoff, web-build, homepage-pipeline, homepage-figma-handoff, homepage-build)가 포함된 경우, 브리프에 다음 항목이 있는지 확인하세요: 프로젝트 타입(webpage/website/webservice), 비즈니스 목표, 타겟 유저, 성공 이벤트. 누락 항목이 있으면 경고만 표시하고 계속 진행하세요."
-          }
-        ],
-        "matcher": "pipeline|handoff|web-build|homepage"
-      }
-    ],
     "PreToolUse": [
       {
         "hooks": [
@@ -21,17 +10,6 @@
           }
         ],
         "matcher": ".*"
-      }
-    ],
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "prompt",
-            "prompt": "docs/ 폴더에 파일이 방금 저장되었습니다. 저장된 파일에 따라 다음 행동을 취하세요:\n- 저장된 파일이 figma-spec.md라면: 미결 디자인 결정 사항을 리스트로 정리하고, /web-build 실행을 제안하세요.\n- 저장된 파일이 build-spec.md 또는 frontend-plan.md라면: 프리뷰 배포 전 검증 체크리스트(QA, 애널리틱스, 접근성)를 제시하세요.\n- 그 외 파일이라면: 별도 액션 없이 계속 진행하세요."
-          }
-        ],
-        "matcher": "Write|create_file"
       }
     ]
   }
