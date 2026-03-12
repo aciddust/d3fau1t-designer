@@ -1,26 +1,15 @@
 {
-  "description": "AI web production pipeline hooks for pre-flight validation and post-step notifications",
+  "description": "AI 웹 프로덕션 파이프라인 훅",
   "hooks": {
     "PreToolUse": [
       {
         "hooks": [
           {
             "type": "prompt",
-            "prompt": "Before executing this command, check if the conversation includes a project type (webpage/website/webservice), a business goal, and a target audience. If any of these are missing, politely ask the user to provide them before continuing."
+            "prompt": "모든 응답은 반드시 한국어로 작성하세요."
           }
         ],
-        "matcher": "mcp__"
-      }
-    ],
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "prompt",
-            "prompt": "After writing docs/figma-spec.md, remind the user to review open design assumptions before passing the spec to Figma MCP. Suggest running /web-build as the next step."
-          }
-        ],
-        "matcher": "Write|create_file"
+        "matcher": ".*"
       }
     ]
   }
