@@ -7,76 +7,30 @@
   },
   "license": "MIT",
 
-  "commands": {
-    "web-product-pipeline": {
-      "description": "Run an AI-native web production pipeline for a webpage, website, or web service from brief to UX structure, design handoff, frontend build plan, and validation.",
-      "file": "commands/web-product-pipeline.md"
-    },
-    "web-design-handoff": {
-      "description": "Turn a webpage, website, or web service brief into Figma MCP-ready frames, tokens, components, and execution steps.",
-      "file": "commands/web-design-handoff.md"
-    },
-    "web-build": {
-      "description": "Convert a webpage, website, or web service spec into a frontend implementation plan, and implement only when a real codebase already exists.",
-      "file": "commands/web-build.md"
-    },
-    "homepage-pipeline": {
-      "description": "Specialized homepage and landing page variant of the web product pipeline.",
-      "file": "commands/homepage-pipeline.md"
-    },
-    "homepage-figma-handoff": {
-      "description": "Specialized Figma MCP handoff spec for homepage and landing page structure.",
-      "file": "commands/homepage-figma-handoff.md"
-    },
-    "homepage-build": {
-      "description": "Specialized frontend build command for homepage scope.",
-      "file": "commands/homepage-build.md"
-    }
-  },
+  "commands": [
+    "commands/web-product-pipeline.md",
+    "commands/web-design-handoff.md",
+    "commands/web-build.md",
+    "commands/homepage-pipeline.md",
+    "commands/homepage-figma-handoff.md",
+    "commands/homepage-build.md"
+  ],
 
-  "agents": {
-    "web-production-agent": {
-      "description": "Orchestrates the full web production pipeline from brief intake to frontend planning.",
-      "file": "agents/web-production-agent.agent.md"
-    },
-    "design-handoff-agent": {
-      "description": "Specializes in producing Figma MCP-ready design specs from brief or IA.",
-      "file": "agents/design-handoff-agent.agent.md"
-    }
-  },
+  "agents": [
+    "agents/web-production-agent.agent.md",
+    "agents/design-handoff-agent.agent.md"
+  ],
 
-  "skills": {
-    "brief-intake": {
-      "description": "Validates and structures a web project brief from raw user input.",
-      "file": "skills/brief-intake/SKILL.md"
-    },
-    "ia-generator": {
-      "description": "Generates information architecture, sitemap, and user flows from a validated brief.",
-      "file": "skills/ia-generator/SKILL.md"
-    },
-    "figma-spec-writer": {
-      "description": "Produces Figma MCP-ready design specs including tokens, components, and copy placeholders.",
-      "file": "skills/figma-spec-writer/SKILL.md"
-    },
-    "frontend-planner": {
-      "description": "Produces a frontend implementation plan or scaffold spec from a design and IA.",
-      "file": "skills/frontend-planner/SKILL.md"
-    }
-  },
+  "skills": [
+    "skills/brief-intake/SKILL.md",
+    "skills/ia-generator/SKILL.md",
+    "skills/figma-spec-writer/SKILL.md",
+    "skills/frontend-planner/SKILL.md"
+  ],
 
-  "hooks": {
-    "PreToolUse": [
-      {
-        "file": "hooks/on-brief-received.json"
-      }
-    ],
-    "PostToolUse": [
-      {
-        "file": "hooks/on-design-handoff-complete.json"
-      },
-      {
-        "file": "hooks/on-build-complete.json"
-      }
-    ]
-  }
+  "hooks": [
+    "hooks/on-brief-received.json",
+    "hooks/on-design-handoff-complete.json",
+    "hooks/on-build-complete.json"
+  ]
 }
